@@ -77,6 +77,24 @@ if test == "Labelling":
 
 
 # Halaman Prediksi
+# definisikan dulu
+# Fungsi prediksi harga
+def predict_house_price(Jenis_Rumah, Lokasi, KT, KM, Garasi, LT, LB):
+    # Memasukkan data
+    input_data = [[Jenis_Rumah, Lokasi, KT, KM, Garasi, LT, LB]]
+    # Konversi list ke array numpy
+    input_data_array = np.array(input_data)
+    # Lakukan prediksi menggunakan model RandomForestRegressor
+    prediction = model_RF.predict(input_data_array)
+    # Konversi prediksi ke dalam bentuk miliar rupiah
+    prediction_in_billions = prediction * 1_000_000_000
+    # Membulatkan hasil prediksi dengan menghapus bagian desimal
+    prediction_rounded = int(prediction_in_billions[0])
+    # Format hasil prediksi dengan pemisah ribuan
+    prediction_formatted = f"{prediction_rounded:,}".replace(",", ".")
+    return prediction_formatted
+
+# tampilan web
 if test == "Prediksi":
     st.subheader("Prediksi harga rumah di Kota Semarang")
     
@@ -84,19 +102,19 @@ if test == "Prediksi":
     col1, col2 = st.columns(2)
 
     with col1:
-        Jenis_Rumah = st.number_input('Input Jenis Rumah')
+        Jenis_Rumah = st.selectbox("Jenis Rumah", [0, 1, 2])
     with col2:
-        Lokasi = st.number_input('Input Lokasi')
+        st.selectbox("Lokasi", [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14, 15, 16])
     with col1:
-        KT = st.number_input('Input Jumlah Kamar Tidur')
+        KT = st.number_input('Input Jumlah Kamar Tidur', min_value=1, max_value=10)
     with col2:
-        KM = st.number_input('Input Jumlah Kamar Mandi')
+        KM = st.number_input('Input Jumlah Kamar Mandi', min_value=1, max_value=10)
     with col1:
-        Garasi = st.number_input('Input Garasi (menampung berapa mobil)')
+        Garasi = st.number_input('Input Garasi (menampung berapa mobil)', min_value=1, max_value=10)
     with col2:
-        LT = st.number_input('Input Luas Tanah (m2)')
+        LT = st.number_input('Input Luas Tanah (m2)',  min_value=28)
     with col1:
-        LB = st.number_input('Input Luas Bangunan (m2)')
+        LB = st.number_input('Input Luas Bangunan (m2)',  min_value=29)
 
     predict = ''
 
