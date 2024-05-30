@@ -37,7 +37,7 @@ if test == "Data":
     st.write(data)
     st.write("Sumber Data : Rumah123.com (Kota Semarang) per Maret 2024")
     st.markdown("""
-    ### Catatan untuk jenis rumah:
+    ##### Catatan untuk jenis_rumah:
     - **rumah**: rumah biasa
     - **rumah featured**: rumah unggulan
     - **rumah premier**: rumah mewah
