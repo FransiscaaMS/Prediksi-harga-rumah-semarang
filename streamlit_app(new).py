@@ -119,11 +119,9 @@ if test == "Prediksi":
     predict = ''
 
     
-    if st.button("Prediksi Harga Rumah (miliar)"):
-        predict = model.predict(
-            [[Jenis_Rumah, Lokasi, KT, KM, Garasi, LT, LB]]
-        )
-        st.write("Berikut merupakan prediksi harga rumah sesuai dengan kriteria dalam satuan miliar : ", predict)
+if st.button("Prediksi Harga Rumah (miliar)"):
+        predict = predict_house_price(Jenis_Rumah, Lokasi, KT, KM, Garasi, LT, LB)
+        st.write("Berikut merupakan prediksi harga rumah sesuai dengan kriteria dalam satuan miliar: ", predict)
     
     
     
