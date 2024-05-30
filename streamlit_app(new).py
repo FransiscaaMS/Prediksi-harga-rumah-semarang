@@ -111,8 +111,35 @@ if test == "Prediksi":
 # Halaman Kontak
 if test == "Kontak":
     st.subheader("Hai, mari terhubung! :wave:")
-    st.write("Nama     : Fransisca Mulya Sari")
-    st.write("LinkedIn : https://www.linkedin.com/in/fransisca-mulya-sari-a51853260/")
-    st.write("Github   : https://github.com/FransiscaaMS")
-    st.write("Email    : fransiscaams@gmail.com")
+    st.markdown("""
+        <style>
+        .contact-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .contact-table td {
+            padding: 8px;
+            text-align: left;
+            vertical-align: top;
+        }
+        </style>
+        <table class="contact-table">
+            <tr>
+                <td>Nama</td>
+                <td>: Fransisca Mulya Sari</td>
+            </tr>
+            <tr>
+                <td>LinkedIn</td>
+                <td>: <a href="https://www.linkedin.com/in/fransisca-mulya-sari-a51853260/" target="_blank">https://www.linkedin.com/in/fransisca-mulya-sari-a51853260/</a></td>
+            </tr>
+            <tr>
+                <td>Github</td>
+                <td>: <a href="https://github.com/FransiscaaMS" target="_blank">https://github.com/FransiscaaMS</a></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>: <a href="mailto:fransiscaams@gmail.com">fransiscaams@gmail.com</a></td>
+            </tr>
+        </table>
+    """, unsafe_allow_html=True)
 
