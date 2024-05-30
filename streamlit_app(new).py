@@ -48,7 +48,7 @@ if test == "Data":
 # Halaman Labelling
 if test == "Labelling":
     st.subheader("Labelling")
-    st.markdown("##### Untuk variabel 'Jenis Rumah' dan 'Lokasi' merupakan variabel kategorik sehingga harus dikonversi kedalam variabel numerik agar dapat di prediksi")
+    st.markdown("##### Untuk variabel 'Jenis Rumah' dan 'Lokasi' merupakan variabel kategorik sehingga harus dikonversi ke dalam variabel numerik agar dapat di prediksi")
     st.markdown("###### Variabel jenis rumah")
     st.text("0 = jenis rumah biasa")
     st.text("1 = jenis rumah featured")
