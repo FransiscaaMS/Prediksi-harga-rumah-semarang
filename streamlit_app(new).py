@@ -112,12 +112,8 @@ if test == "Prediksi":
 # Halaman Kontak
 if test == "Kontak":
     st.subheader("Hai, mari terhubung! :wave:")
-    col1, col2 = st.columns(2)
-    with col1:
-        st.image('ciss.png')
-    with col2:
-        st.write("Nama     : Fransisca Mulya Sari")
-        st.write("LinkedIn : https://www.linkedin.com/in/fransisca-mulya-sari-a51853260/")
-        st.write("Github   : https://github.com/FransiscaaMS")
-        st.write("Email    : fransiscaams@gmail.com")
+    st.write("Nama     : Fransisca Mulya Sari")
+    st.write("LinkedIn : https://www.linkedin.com/in/fransisca-mulya-sari-a51853260/")
+    st.write("Github   : https://github.com/FransiscaaMS")
+    st.write("Email    : fransiscaams@gmail.com")
     
