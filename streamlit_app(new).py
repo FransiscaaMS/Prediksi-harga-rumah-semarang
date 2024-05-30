@@ -92,21 +92,21 @@ if test == "Prediksi":
     with col2:
         Lokasi = st.selectbox("Lokasi", [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16])
     with col1:
-        KT = st.number_input('Input Jumlah Kamar Tidur (min=1)')
+        KT = st.number_input('Input Jumlah Kamar Tidur', min_value=1, max_value=10)
     with col2:
-        KM = st.number_input('Input Jumlah Kamar Mandi (min=1)')
+        KM = st.number_input('Input Jumlah Kamar Mandi', min_value=1, max_value=10)
     with col1:
-        Garasi = st.number_input('Input Garasi (menampung berapa mobil) (min=1)')
+        Garasi = st.number_input('Input Garasi (menampung berapa mobil)', min_value=1, max_value=10)
     with col2:
-        LT = st.number_input('Input Luas Tanah (m2) (min=28)')
+        LT = st.number_input('Input Luas Tanah (m2)', min_value=28)
     with col1:
-        LB = st.number_input('Input Luas Bangunan (m2) (min=29)')
+        LB = st.number_input('Input Luas Bangunan (m2)', min_value=29)
 
     predict = ''
 
-    if st.button("Prediksi Harga Rumah (miliar)"):
+    if st.button("Prediksi Harga Rumah"):
         predict = predict_house_price(Jenis_Rumah, Lokasi, KT, KM, Garasi, LT, LB)
-        st.markdown(f"Prediksi harga rumah sesuai dengan kriteria di Kota Semarang:<br><h2>{predict}</h2>", unsafe_allow_html=True)
+        st.markdown(f"Berikut merupakan prediksi harga rumah sesuai dengan kriteria yang anda inginkan :<br><h2>{predict}</h2>", unsafe_allow_html=True)
 
 # Halaman Kontak
 if test == "Kontak":
