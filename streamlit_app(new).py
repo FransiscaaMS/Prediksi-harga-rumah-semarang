@@ -106,7 +106,7 @@ if test == "Prediksi":
 
     if st.button("Prediksi Harga Rumah (miliar)"):
         predict = predict_house_price(Jenis_Rumah, Lokasi, KT, KM, Garasi, LT, LB)
-        st.write("Prediksi harga rumah sesuai dengan kriteria di Kota Semarang: ", predict)
+        st.markdown(f"Prediksi harga rumah sesuai dengan kriteria di Kota Semarang:<br><h2>{predict}</h2>", unsafe_allow_html=True)
 
 # Halaman Kontak
 if test == "Kontak":
@@ -115,3 +115,4 @@ if test == "Kontak":
     st.write("LinkedIn : https://www.linkedin.com/in/fransisca-mulya-sari-a51853260/")
     st.write("Github   : https://github.com/FransiscaaMS")
     st.write("Email    : fransiscaams@gmail.com")
+
