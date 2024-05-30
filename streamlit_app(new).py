@@ -26,6 +26,7 @@ if test == "Beranda":
     st.header("Halo semuanya selamat datang :wave:")
     st.markdown("#### Ini merupakan website yang dapat memprediksi harga rumah di Kota Semarang sesuai dengan kriteria yang diinginkan oleh calon pembeli.")
     st.image('Poster Peta Kota Semarang.png')
+    st.markdown("#### Jangan lupa untuk membuka 'Labelling' untuk mengetahui konversi tipe data")
     st.markdown("#### Dengan adanya website ini, diharapkan dapat membantu para calon pembeli dalam menentukan harga rumah yang sesuai dan memenuhi kriteria rumah impiannya.")
     st.markdown("#### Selamat mencoba!")
 
@@ -37,7 +38,7 @@ if test == "Data":
     st.write(data)
     st.write("Sumber Data : Rumah123.com (Kota Semarang) per Maret 2024")
     st.markdown("""
-    ##### Catatan untuk jenis_rumah:
+    ###### Catatan untuk jenis_rumah:
     - **rumah**: rumah biasa
     - **rumah featured**: rumah unggulan
     - **rumah premier**: rumah mewah
