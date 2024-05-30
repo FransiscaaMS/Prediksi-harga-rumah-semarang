@@ -76,8 +76,8 @@ def predict_house_price(Jenis_Rumah, Lokasi, KT, KM, Garasi, LT, LB):
     prediction_in_billions = prediction * 1_000_000_000
     # Membulatkan hasil prediksi dengan menghapus bagian desimal
     prediction_rounded = int(prediction_in_billions[0])
-    # Format hasil prediksi dengan pemisah ribuan
-    prediction_formatted = f"{prediction_rounded:,}".replace(",", ".")
+    # Format hasil prediksi dengan pemisah ribuan dan tambah "Rp."
+    prediction_formatted = f"Rp. {prediction_rounded:,}".replace(",", ".")
     return prediction_formatted
 
 # Halaman Prediksi
@@ -88,7 +88,7 @@ if test == "Prediksi":
     col1, col2 = st.columns(2)
 
     with col1:
-        Jenis_Rumah = st.selectbox("Jenis Rumah", [0, 1, 2])
+        Jenis_Rumah = st.selectbox("Jenis Rumah", ["0 = Rumah biasa", "1 = Rumah featured", "2 = Rumah premier"])
     with col2:
         Lokasi = st.selectbox("Lokasi", [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16])
     with col1:
@@ -106,7 +106,7 @@ if test == "Prediksi":
 
     if st.button("Prediksi Harga Rumah (miliar)"):
         predict = predict_house_price(Jenis_Rumah, Lokasi, KT, KM, Garasi, LT, LB)
-        st.write("Berikut merupakan prediksi harga rumah sesuai dengan kriteria dalam satuan miliar: ", predict)
+        st.write("Prediksi harga rumah sesuai dengan kriteria di Kota Semarang: ", predict)
 
 # Halaman Kontak
 if test == "Kontak":
