@@ -31,11 +31,18 @@ if test == "Beranda":
 
 # Halaman Data
 if test == "Data":
-    st.header("Data Bersih")
+    st.header("Data")
     st.write("Berikut merupakan data yang digunakan dalam prediksi harga rumah di Kota Semarang.") 
     data = pd.read_csv("df_cleaning_web.csv")
     st.write(data)
     st.write("Sumber Data : Rumah123.com (Kota Semarang) per Maret 2024")
+    st.markdown("""
+    ### Catatan untuk jenis rumah:
+    - **rumah**: rumah biasa
+    - **rumah featured**: rumah unggulan
+    - **rumah premier**: rumah mewah
+    """)
+    
 
 # Halaman Labelling
 if test == "Labelling":
