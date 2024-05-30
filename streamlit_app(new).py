@@ -26,7 +26,7 @@ if test == "Beranda":
     st.header("Halo semuanya selamat datang :wave:")
     st.markdown("#### Ini merupakan website yang dapat memprediksi harga rumah di Kota Semarang sesuai dengan kriteria yang diinginkan oleh calon pembeli.")
     st.image('Peta Kota Semarang.png')
-    st.markdown("#### Jangan lupa untuk membuka 'Labelling' untuk mengetahui konversi tipe data ya :smile:")
+    st.markdown("#### Jangan lupa untuk membuka 'Labelling' untuk mengetahui konversi tipe data ya :blush:")
     st.markdown("#### Dengan adanya website ini, diharapkan dapat membantu para calon pembeli dalam menentukan harga rumah yang sesuai dan memenuhi kriteria rumah impiannya.")
     st.markdown("#### Selamat mencoba!")
 
