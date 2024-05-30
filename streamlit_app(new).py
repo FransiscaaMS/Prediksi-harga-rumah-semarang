@@ -109,37 +109,13 @@ if test == "Prediksi":
         st.markdown(f"Berikut merupakan prediksi harga rumah sesuai dengan kriteria yang anda inginkan :<br><h2>{predict}</h2>", unsafe_allow_html=True)
 
 # Halaman Kontak
+
 if test == "Kontak":
     st.subheader("Hai, mari terhubung! :wave:")
     st.markdown("""
-        <style>
-        .contact-table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        .contact-table td {
-            padding: 8px;
-            text-align: left;
-            vertical-align: top;
-        }
-        </style>
-        <table class="contact-table">
-            <tr>
-                <td>Nama</td>
-                <td>: Fransisca Mulya Sari</td>
-            </tr>
-            <tr>
-                <td>LinkedIn</td>
-                <td>: <a href="https://www.linkedin.com/in/fransisca-mulya-sari-a51853260/" target="_blank">https://www.linkedin.com/in/fransisca-mulya-sari-a51853260/</a></td>
-            </tr>
-            <tr>
-                <td>Github</td>
-                <td>: <a href="https://github.com/FransiscaaMS" target="_blank">https://github.com/FransiscaaMS</a></td>
-            </tr>
-            <tr>
-                <td>Email</td>
-                <td>: <a href="mailto:fransiscaams@gmail.com">fransiscaams@gmail.com</a></td>
-            </tr>
-        </table>
-    """, unsafe_allow_html=True)
+    **Nama**    : Fransisca Mulya Sari  
+    **LinkedIn**: [https://www.linkedin.com/in/fransisca-mulya-sari-a51853260/](https://www.linkedin.com/in/fransisca-mulya-sari-a51853260/)  
+    **Github**  : [https://github.com/FransiscaaMS](https://github.com/FransiscaaMS)  
+    **Email**   : [fransiscaams@gmail.com](mailto:fransiscaams@gmail.com)  
+    """)
 
