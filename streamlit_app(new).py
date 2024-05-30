@@ -5,6 +5,7 @@ import zipfile
 from io import BytesIO
 import os
 import tempfile
+import numpy as np
 
 # path_to_file = "prediksi_harga_rumah_smg.sav"  
 # model = pickle.load(open(path_to_file, 'rb'))
