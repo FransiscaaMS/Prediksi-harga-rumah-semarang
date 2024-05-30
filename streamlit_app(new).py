@@ -92,15 +92,15 @@ if test == "Prediksi":
     with col2:
         Lokasi = st.selectbox("Lokasi", [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16])
     with col1:
-        KT = st.number_input('Input Jumlah Kamar Tidur', min_value=1, max_value=10)
+        KT = st.number_input('Input Jumlah Kamar Tidur (min=1)')
     with col2:
-        KM = st.number_input('Input Jumlah Kamar Mandi', min_value=1, max_value=10)
+        KM = st.number_input('Input Jumlah Kamar Mandi (min=1)')
     with col1:
-        Garasi = st.number_input('Input Garasi (menampung berapa mobil)', min_value=1, max_value=10)
+        Garasi = st.number_input('Input Garasi (menampung berapa mobil) (min=1)')
     with col2:
-        LT = st.number_input('Input Luas Tanah (m2)', min_value=28)
+        LT = st.number_input('Input Luas Tanah (m2) (min=28)')
     with col1:
-        LB = st.number_input('Input Luas Bangunan (m2)', min_value=29)
+        LB = st.number_input('Input Luas Bangunan (m2) (min=29)')
 
     predict = ''
 
