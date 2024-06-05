@@ -45,32 +45,41 @@ if test == "Data":
     """)
     
 
+import streamlit as st
+
 # Halaman Labelling
 if test == "Labelling":
     st.subheader("Labelling")
     st.markdown("##### Untuk variabel 'Jenis Rumah' dan 'Lokasi' merupakan variabel kategorik sehingga harus dikonversi ke dalam variabel numerik agar dapat di prediksi")
-    st.markdown("###### Variabel jenis rumah")
-    st.text("0 = jenis rumah biasa")
-    st.text("1 = jenis rumah featured (unggulan)")
-    st.text("2 = jenis rumah premier (mewah)")
-    st.markdown("###### Variabel lokasi")
-    st.text("0 = Banyumanik, Semarang")
-    st.text("1 = Candisari, Semarang")
-    st.text("2 = Gajah Mungkur, Semarang")
-    st.text("3 = Gayamsari, Semarang")
-    st.text("4 = Genuk, Semarang")
-    st.text("5 = Gunung Pati, Semarang")
-    st.text("6 = Mijen, Semarang")
-    st.text("7 = Ngaliyan, Semarang")
-    st.text("8 = Pedurungan, Semarang")
-    st.text("9 = Semarang Barat, Semarang")
-    st.text("10 = Semarang Selatan, Semarang")
-    st.text("11 = Semarang Tengah, Semarang")
-    st.text("12 = Semarang Timur, Semarang")
-    st.text("13 = Semarang Utara, Semarang")
-    st.text("14 = Tembalang, Semarang")
-    st.text("15 = Tugu, Semarang")
-    st.text("16 = Semarang lainnya")
+    
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        st.markdown("###### Variabel jenis rumah")
+        st.text("0 = jenis rumah biasa")
+        st.text("1 = jenis rumah featured (unggulan)")
+        st.text("2 = jenis rumah premier (mewah)")
+
+    with col2:
+        st.markdown("###### Variabel lokasi")
+        st.text("0 = Banyumanik, Semarang")
+        st.text("1 = Candisari, Semarang")
+        st.text("2 = Gajah Mungkur, Semarang")
+        st.text("3 = Gayamsari, Semarang")
+        st.text("4 = Genuk, Semarang")
+        st.text("5 = Gunung Pati, Semarang")
+        st.text("6 = Mijen, Semarang")
+        st.text("7 = Ngaliyan, Semarang")
+        st.text("8 = Pedurungan, Semarang")
+        st.text("9 = Semarang Barat, Semarang")
+        st.text("10 = Semarang Selatan, Semarang")
+        st.text("11 = Semarang Tengah, Semarang")
+        st.text("12 = Semarang Timur, Semarang")
+        st.text("13 = Semarang Utara, Semarang")
+        st.text("14 = Tembalang, Semarang")
+        st.text("15 = Tugu, Semarang")
+        st.text("16 = Semarang lainnya")
+
 
 # Fungsi prediksi harga
 def predict_house_price(Jenis_Rumah, Lokasi, KT, KM, Garasi, LT, LB):
