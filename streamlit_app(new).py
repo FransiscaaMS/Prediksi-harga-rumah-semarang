@@ -43,9 +43,6 @@ if test == "Data":
     - **rumah featured**: rumah unggulan
     - **rumah premier**: rumah mewah
     """)
-    
-
-import streamlit as st
 
 # Halaman Labelling
 if test == "Labelling":
@@ -135,4 +132,3 @@ if test == "Kontak":
     **Github**  : [https://github.com/FransiscaaMS](https://github.com/FransiscaaMS)  
     **Email**   : [fransiscaams@gmail.com](mailto:fransiscaams@gmail.com)  
     """)
-
